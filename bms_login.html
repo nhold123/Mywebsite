@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<script type="text/javascript">
+		function validateForm() {
+			var username = document.forms["loginForm"]["username"].value;
+			var password = document.forms["loginForm"]["password"].value;
+
+			if (username == "arnold" && password == "a123") {
+				window.location.href='boymetalsmithhompage.html';
+				alert("Login successful!");
+				
+				return true;
+			} else {
+				alert("Invalid username or password.");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body style="font-family: fantasy;">
+    <fieldset style="background-color: grey;">
+        <legend style="Background-color: grey; ">Boy Metal Smith</legend>
+    
+	<form style="text-align: center;"name="loginForm" onsubmit="return validateForm()" method="post">
+	    <img src="D:\BSIT2D_Baticados\WST2\bmslogo\logo1.png" style="width: 500px; height:500px; text-align:center;">
+	    <br />
+	    <br />
+	    
+	    
+		Username: <input type="text" name="username"><br>
+		Password: <input type="password" name="password"><br>
+		<input type="submit" value="Login" style="text-align: center; ">
+		<br />
+		<br />
+	</form>
+	</fieldset>
+</body>
+</html>

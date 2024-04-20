@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMS contact</title>
+    <script>
+        function submitForm() {
+            alert("Submit successfully! Please always check your Email for our feedback. Thank you!");
+            
+        }
+    </script>
+</head>
+<body>
+    <fieldset style="background-color: grey; text-align:center; ">
+    <legend style="font-family: fantasy; background-color: grey; ">Contact Us</legend>
+    <img  src="D:\BSIT2D_Baticados\WST2\bmslogo\logo1.png" style="width: 200px; hieght: 200px;">
+    <br />
+    <form action="boymetalsmithhompage.html" method="post" onsubmit="submitForm()" style= "text-align: center; ">
+        <label style="font-family: fantasy;" for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+       
+        <br />
+        
+        <label style="font-family: fantasy;" for="email">Email:</label>
+        <input type="email" id="email" name="email"  required >
+        
+        <br />
+        <br />
+        
+        <label style="font-family: fantasy;"for="message">Message:</label>
+        <textarea id="message" name="message" rows="10" required></textarea>
+        <br />
+
+        <button style=" position: absolute; right: 900px;"type="submit">Submit</button><br />
+    </form>
+    </fieldset>
+</body>
+</html>
