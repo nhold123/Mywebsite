@@ -10,7 +10,7 @@
 
 			if (username == "arnold" && password == "a123") {
 				alert("Login successful!");
-			        window.open.location.href="boymetalsmithhompage.html";
+				location="boymetalsmithhompage.html";
 				return true;
 			} else {
 				alert("Invalid username or password.");
@@ -18,17 +18,17 @@
 			}
 		}
 	</script>
-    <body><center><br><fieldset>
+    <body><center><br><fieldset><br>
         
         <form style="text-align: center;"name="loginForm" onsubmit="return validateForm()" method="post">
-	    <img src="bmslogo/logo1.png" style="width: 200px; height:200px; text-align:center;">
+	    <img src="bmslogo/logo1.png" style="width: 400px; height:400px; text-align:center;">
 	    <br />
 	    <br />
 	    
 	    
 		Username: <input type="text" name="username"><br><br />
 		Password: <input type="password" name="password"><br><br>
-		<input type="submit" value="Login" style="text-align: center; width: 100px; ">
+		<input type="submit" value="Login" style="text-align: center; font-size: 50px;width: 300px;height: 70px; ">
                 <br />
             </form>
         </div>
@@ -36,13 +36,13 @@
     <style>
  fieldset{
     background: url('bmslogo/logo1.png');
-    min-height:25vh;
-    width: 350px;
+    min-height:50vh;
+    width: 700px;
 }
 body 
 {
     font-family:sans-serif;
-    font-size:20px;
+    font-size:50px;
     width:
     color:#000;
     justify-content:center;
@@ -53,7 +53,7 @@ input{
     
     height:40px;
     padding:10px;
-    width:200px;
+    width:500px;
     background-color:grey;
     border: 2px solid rgba(255,255,255,0.3);
     border-radius:30px;
