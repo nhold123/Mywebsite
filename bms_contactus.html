@@ -5,20 +5,20 @@
     <script>
         function submitForm() {
             alert("Submit successfully! Please always check your Email for our feedback. Thank you!");
-            location="boymetalsmithhompage.html";
+            window.open('boymetalsmithhompage.html');
         }
     </script>
 </head>
-<body>
-    <fieldset style="background-color: grey; text-align:center; ">
+<body style="position:absolute; right: 700px;">
+    <fieldset style="background-color: grey; text-align:center; width: 100px;  ">
     <legend style="font-family: fantasy; background-color: grey; ">Contact Us</legend>
-    <img  src="D:\BSIT2D_Baticados\WST2\bmslogo\logo1.png" style="width: 200px; hieght: 200px;">
-    <br />
+    <img  src="bmslogo\logo1.png" style="width: 200px; hieght: 200px;">
+    <br /> <p>Send your concern or feedback here.</p>
     <form action="boymetalsmithhompage.html" method="post" onsubmit="submitForm()" style= "text-align: center; ">
         <label style="font-family: fantasy;" for="name">Name:</label>
         <input type="text" id="name" name="name" required>
        
-        <br />
+        <br /> 
         
         <label style="font-family: fantasy;" for="email">Email:</label>
         <input type="email" id="email" name="email"  required >
@@ -27,11 +27,13 @@
         <br />
         
         <label style="font-family: fantasy;"for="message">Message:</label>
-        <textarea id="message" name="message" rows="10" required></textarea>
+        <textarea id="message" name="message" style="width: 500px;" rows="10" required></textarea>
         <br />
 
-        <button style=" position: absolute; right: 900px;"type="submit">Submit</button><br />
-        <a href="boymetalsmithhompage.html" style="border: solid;">Back to Homepage</a>
+        <button style=" position: absolute; left: 250px;"type="submit">Submit</button><br />
+		<br />
+		<a href="boymetalsmithhompage.html" style="border: solid; position:absolute; left: 40px; font-size:12px; color:black;">Back to homepage</a>
+		<br />
     </form>
     </fieldset>
 </body>
