@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bms cashier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .item input[type="number"] {
+            width: 50px;
+        }
+        .item button {
+            margin-left: 10px;
+        }
+        #total {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #payment {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body style="width: 900px; position:absolute; right:700px;">
+    <div class="container">
+        <fieldset style="background-color: grey;">
+        <legend style="Background-color: grey; ">Boy Metal Smith</legend>
+        <img src="D:\BSIT2D_Baticados\WST2\bmslogo\logo1.png" style="width: 160px; hieght: 160px; "/>
+        
+        <h2>Items</h2>
+        <div class="item">
+            <label for="item1">Item 1: $650.00</label>
+            <input type="number" id="item1" min="0">
+            <button id="add-item1">Add</button>
+        </div>
+        <div class="item">
+            <label for="item2">Item 2: $100.00</label>
+            <input type="number" id="item2" min="0">
+            <button id="add-item2">Add</button>
+        </div>
+        <div class="item">
+            <label for="item3">Item 3: $500.00</label>
+            <input type="number" id="item3" min="0">
+            <button id="add-item3">Add</button>
+        </div>
+		 <div class="item">
+            <label for="item4">Item 4: $450.00</label>
+            <input type="number" id="item4" min="0">
+            <button id="add-item4">Add</button>
+        </div>
+        <div class="item">
+            <label for="item5">Item 5: $550.00</label>
+            <input type="number" id="item5" min="0">
+            <button id="add-item5">Add</button>
+        </div>
+        <div class="item">
+            <label for="item6">Item 6: $600.00</label>
+            <input type="number" id="item6" min="0">
+            <button id="add-item6">Add</button>
+        </div>
+		 <div class="item">
+            <label for="item7">Item 7: $550.00</label>
+            <input type="number" id="item7" min="0">
+            <button id="add-item7">Add</button>
+        </div>
+        <div class="item">
+            <label for="item8">Item 8: $350.00</label>
+            <input type="number" id="item8" min="0">
+            <button id="add-item8">Add</button>
+        </div>
+        <div class="item">
+            <label for="item9">Item 9: $600.00</label>
+            <input type="number" id="item9" min="0">
+            <button id="add-item9">Add</button>
+        </div>
+		 <div class="item">
+            <label for="item10">Item 10: $500.00</label>
+            <input type="number" id="item10" min="0">
+            <button id="add-item10">Add</button>
+        </div>
+        <div class="item">
+            <label for="item11">Item 11: $400.00</label>
+            <input type="number" id="item11" min="0">
+            <button id="add-item11">Add</button>
+        </div>
+        <div class="item">
+            <label for="item12">Item 12: $350.00</label>
+            <input type="number" id="item12" min="0">
+            <button id="add-item12">Add</button>
+        </div>
+		 <div class="item">
+            <label for="item13">Item 13: $600.00</label>
+            <input type="number" id="item13" min="0">
+            <button id="add-item13">Add</button>
+        </div>
+        <div class="item">
+            <label for="item14">Item 14: $400.00</label>
+            <input type="number" id="item14" min="0">
+            <button id="add-item14">Add</button>
+        </div>
+        <div class="item">
+            <label for="item15">Item 15: $150.00</label>
+            <input type="number" id="item15" min="0">
+            <button id="add-item15">Add</button>
+        </div>
+		
+        <h2>Total Amount</h2>
+        <p id="total">$ </p>
+        <h2>Payment</h2>
+        <p id="payment">$</p>
+        <input type="number" id="input-money" placeholder="Enter money amount">
+        <button id="pay">Pay</button>
+        <button id="reset">Reset</button>
+		<a style="border: double; color:black; font-size: 12px; position: absolute; right: 110px;"  href="boymetalsmithhompage.html" targel="blank">Back to Homepage</a>
+    </div>
+    <script>
+        const payButton = document.getElementById('pay');
+        const resetButton = document.getElementById('reset');
+        const inputMoney = document.getElementById('input-money');
+        const totalAmount = document.getElementById('total');
+        const paymentAmount = document.getElementById('payment');
+        const item1 = document.getElementById('item1');
+        const item2 = document.getElementById('item2');
+        const item3 = document.getElementById('item3');
+        const item4 = document.getElementById('item4');
+        const item5 = document.getElementById('item5');
+        const item6 = document.getElementById('item6');
+        const item7 = document.getElementById('item7');
+        const item8 = document.getElementById('item8');
+        const item9 = document.getElementById('item9');
+        const item10 = document.getElementById('item10');
+        const item11 = document.getElementById('item11');
+        const item12 = document.getElementById('item12');
+        const item13= document.getElementById('item13');
+        const item14 = document.getElementById('item14');
+        const item15 = document.getElementById('item15');
+        const item16 = document.getElementById('item16');
+       
+        const addItem1 = document.getElementById('add-item1');
+        const addItem2 = document.getElementById('add-item2');
+        const addItem3 = document.getElementById('add-item3');
+		const addItem4 = document.getElementById('add-item4');
+        const addItem5 = document.getElementById('add-item5');
+        const addItem6 = document.getElementById('add-item6');
+		const addItem7 = document.getElementById('add-item7');
+        const addItem8 = document.getElementById('add-item8');
+        const addItem9 = document.getElementById('add-item9');
+		const addItem10 = document.getElementById('add-item10');
+        const addItem11 = document.getElementById('add-item11');
+        const addItem12 = document.getElementById('add-item12');
+		const addItem13 = document.getElementById('add-item13');
+        const addItem14 = document.getElementById('add-item14');
+        const addItem15 = document.getElementById('add-item15');
+		const addItem16 = document.getElementById('add-item16');
+        let total = 0;
+
+        function updateTotal() {
+            total = parseInt(item1.value) * 650 + parseInt(item2.value) * 100 + parseInt(item3.value) * 500 +  parseInt(item4.value) * 450 + parseInt(item5.value) * 550 + parseInt(item6.value) * 600 + parseInt(item7.value) * 550 + parseInt(item8.value) * 350 + parseInt(item9.value) * 600 +  parseInt(item10.value) * 500 + parseInt(item11.value) * 400 + parseInt(item12.value) * 350 +  parseInt(item13.value) * 600 + parseInt(item14.value) * 400 + parseInt(item15.value) * 150;
+            totalAmount.textContent = `$${total}`;
+            paymentAmount.textContent = `$${inputMoney.value - total}`;
+        }
+
+        function reset() {
+            item1.value = 0;
+            item2.value = 0;
+            item3.value = 0;
+			item4.value = 0;
+            item5.value = 0;
+            item6.value = 0;
+			item7.value = 0;
+            item8.value = 0;
+            item9.value = 0;
+			item10.value = 0;
+            item11.value = 0;
+            item12.value = 0;
+			item13.value = 0;
+            item14.value = 0;
+            item15.value = 0;
+            updateTotal();
+        }
+
+        function pay() {
+            const payment = parseInt(inputMoney.value);
+            if (payment < total) {
+                alert('Insufficient payment. Please input exact amount.');
+            } else {
+			    
+                alert(`You successfully purchase! Your change is $${payment - total}. Please check your email. Thank you! `);
+				 window.open('boymetalsmithhompage.html');
+			 reset();
+			
+            }
+        }
+
+        payButton.addEventListener('click', pay);
+        resetButton.addEventListener('click', reset);
+        item1.addEventListener('change',updateTotal);
+        item2.addEventListener('change', updateTotal);
+        item3.addEventListener('change', updateTotal);
+		
+        addItem1.addEventListener('click', () => {
+            item1.value = parseInt(item1.value) + 1;
+            updateTotal();
+        });
+		
+        addItem2.addEventListener('click', () => {
+            item2.value = parseInt(item2.value) + 1;
+            updateTotal();
+        });
+        addItem3.addEventListener('click', () => {
+            item3.value = parseInt(item3.value) + 1;
+            updateTotal();
+        });
+		 addItem4.addEventListener('click', () => {
+         item4.value = parseInt(item4.value) + 1;
+            updateTotal();
+        });
+        addItem5.addEventListener('click', () => {
+            item5.value = parseInt(item5.value) + 1;
+            updateTotal();
+        });
+        addItem6.addEventListener('click', () => {
+            item6.value = parseInt(item6.value) + 1;
+            updateTotal();
+        });
+		 addItem7.addEventListener('click', () => {
+		 item7.value = parseInt(item7.value) + 1;
+            updateTotal();
+        });
+        addItem8.addEventListener('click', () => {
+            item8.value = parseInt(item8.value) + 1;
+            updateTotal();
+        });
+        addItem9.addEventListener('click', () => {
+            item9.value = parseInt(item9.value) + 1;
+            updateTotal();
+        });
+		 addItem10.addEventListener('click', () => {
+            item10.value = parseInt(item10.value) + 1;
+            updateTotal();
+        });
+        addItem11.addEventListener('click', () => {
+            item11.value = parseInt(item11.value) + 1;
+            updateTotal();
+        });
+        addItem12.addEventListener('click', () => {
+            item12.value = parseInt(item12.value) + 1;
+            updateTotal();
+        });
+		 addItem13.addEventListener('click', () => {
+         item13.value = parseInt(item13.value) + 1;
+            updateTotal();
+        });
+        addItem14.addEventListener('click', () => {
+            item14.value = parseInt(item14.value) + 1;
+            updateTotal();
+        });
+        addItem15.addEventListener('click', () => {
+            item15.value = parseInt(item15.value) + 1;
+            updateTotal();
+        });
+
+		
+
+		
+        reset();
+    </script>
+	
+	</fieldset>
+</body>
+</html>
